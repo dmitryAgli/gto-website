@@ -1,0 +1,1658 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+    */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*media quaries*/
+@font-face {
+  font-family: 'PancettaPro';
+  src: url("../fonts/PancettaPro-Regular-webfont.eot");
+  src: url("../fonts/PancettaPro-Regular-webfont.eot?#iefix") format("embeddedopentype"), url("../fonts/PancettaPro-Regular-webfont.woff2") format("woff2"), url("../fonts/PancettaPro-Regular-webfont.woff") format("woff"), url("../fonts/PancettaPro-Regular-webfont.ttf") format("truetype"), url("../fonts/PancettaPro-Regular-webfont.svg") format("svg"); }
+@font-face {
+  font-family: 'HattoriHanzo';
+  src: url("../fonts/hattori_hanzo-webfont.woff2") format("woff2"), url("../fonts/hattori_hanzo-webfont.woff") format("woff"); }
+@font-face {
+  font-family: 'Monoton-Regular';
+  src: url("../fonts/Monoton-Regular.ttf") format("truetype"); }
+html, body {
+  height: 100%;
+  font-family: PancettaPro, Arial, Helvetica, sans-serif;
+  color: white;
+  background-color: #c53649; }
+
+.panel {
+  background-color: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+a, a:focus, a:hover {
+  color: white;
+  text-decoration: none; }
+
+#accordion {
+  height: 100%;
+  /*to expand on full screen*/
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  flex-flow: column; }
+
+header.flex-container {
+  display: none; }
+
+h1 {
+  display: none; }
+
+footer > p {
+  display: none; }
+
+/* START *** mobile first *** portret *** screen 360x640 (9:16) */
+.level-1:first-of-type {
+  /*to expand on full screen*/
+  flex-basis: 100%;
+  background: url(../img/logotip-gto.png) no-repeat 50% 50%;
+  -webkit-background-size: 67% auto;
+  -moz-background-size: 67% auto;
+  -o-background-size: 67% auto;
+  background-size: 67% auto; }
+  @media (orientation: landscape) {
+    .level-1:first-of-type {
+      background: url(../img/pronormygto.png) no-repeat 93% 50%;
+      -webkit-background-size: 65% auto;
+      -moz-background-size: 65% auto;
+      -o-background-size: 65% auto;
+      background-size: 65% auto; } }
+  @media (min-width: 768px) {
+    .level-1:first-of-type {
+      background: url(../img/logotip-gto.png) no-repeat 50% 50%;
+      -webkit-background-size: 60% auto;
+      -moz-background-size: 60% auto;
+      -o-background-size: 60% auto;
+      background-size: 60% auto; } }
+  @media (min-width: 1024px) {
+    .level-1:first-of-type {
+      background: url(../img/pronormygto.png) no-repeat 93% 50%;
+      -webkit-background-size: 65% auto;
+      -moz-background-size: 65% auto;
+      -o-background-size: 65% auto;
+      background-size: 65% auto; } }
+  .level-1:first-of-type a {
+    display: none; }
+    @media (min-width: 1200px) {
+      .level-1:first-of-type a {
+        display: -webkit-flex;
+        display: flex; } }
+
+.level-1:nth-of-type(1n+2) nav {
+  display: -webkit-flex;
+  display: flex;
+  border-top: 3px solid #942938; }
+  .level-1:nth-of-type(1n+2) nav.level-4 {
+    border-bottom: 2px solid #660000; }
+.level-1:nth-of-type(1n+2) figure {
+  -webkit-flex-basis: 20%;
+  flex-basis: 20%;
+  background: url(../img/mobile/mob-stupeni-white.png) no-repeat 50% 50%;
+  -webkit-background-size: 40% auto;
+  -moz-background-size: 40% auto;
+  -o-background-size: 40% auto;
+  background-size: 40% auto; }
+  @media (min-width: 768px) {
+    .level-1:nth-of-type(1n+2) figure {
+      -webkit-background-size: 35% auto;
+      -moz-background-size: 35% auto;
+      -o-background-size: 35% auto;
+      background-size: 35% auto; } }
+  @media (min-width: 1024px) {
+    .level-1:nth-of-type(1n+2) figure {
+      -webkit-background-size: 25% auto;
+      -moz-background-size: 25% auto;
+      -o-background-size: 25% auto;
+      background-size: 25% auto; } }
+.level-1:nth-of-type(1n+2) figure.test {
+  -webkit-flex-basis: 20%;
+  flex-basis: 20%;
+  background: url(../img/mobile/mob-tests-white.png) no-repeat 50% 50%;
+  -webkit-background-size: 40% auto;
+  -moz-background-size: 40% auto;
+  -o-background-size: 40% auto;
+  background-size: 40% auto; }
+  @media (min-width: 768px) {
+    .level-1:nth-of-type(1n+2) figure.test {
+      -webkit-background-size: 35% auto;
+      -moz-background-size: 35% auto;
+      -o-background-size: 35% auto;
+      background-size: 35% auto; } }
+  @media (min-width: 1024px) {
+    .level-1:nth-of-type(1n+2) figure.test {
+      -webkit-background-size: 25% auto;
+      -moz-background-size: 25% auto;
+      -o-background-size: 25% auto;
+      background-size: 25% auto; } }
+.level-1:nth-of-type(1n+2) h2 {
+  -webkit-flex-basis: 55%;
+  flex-basis: 55%;
+  font-size: 21px;
+  align-self: center; }
+  @media (min-width: 768px) {
+    .level-1:nth-of-type(1n+2) h2 {
+      -webkit-flex-basis: 60%;
+      flex-basis: 60%; } }
+  @media (width: 414px) {
+    .level-1:nth-of-type(1n+2) h2 {
+      font-size: 24.15px; } }
+  @media (min-width: 768px) {
+    .level-1:nth-of-type(1n+2) h2 {
+      font-size: 33.6px; } }
+  @media (orientation: landscape) {
+    .level-1:nth-of-type(1n+2) h2 {
+      -webkit-flex-basis: 60%;
+      flex-basis: 60%;
+      font-size: 40px; } }
+  @media (orientation: landscape) and (min-width: 1024px) {
+    .level-1:nth-of-type(1n+2) h2 {
+      font-size: 38px; } }
+
+.level-1:nth-of-type(1n+2) a {
+  -webkit-flex-basis: 25%;
+  flex-basis: 25%;
+  display: -webkit-flex;
+  display: flex;
+  /*Glyphicons*/
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  @media (orientation: landscape) {
+    .level-1:nth-of-type(1n+2) a {
+      -webkit-flex-basis: 20%;
+      flex-basis: 20%; } }
+  @media (min-width: 768px) {
+    .level-1:nth-of-type(1n+2) a {
+      -webkit-flex-basis: 20%;
+      flex-basis: 20%; } }
+  .level-1:nth-of-type(1n+2) a:active {
+    background-color: #942938; }
+  .level-1:nth-of-type(1n+2) a:after {
+    font-family: "Glyphicons Halflings";
+    content: "\2212";
+    font-size: 18px;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    text-align: center;
+    align-self: center; }
+    @media (min-width: 768px) {
+      .level-1:nth-of-type(1n+2) a:after {
+        font-size: 28.8px; } }
+  @media (orientation: landscape) {
+    .level-1:nth-of-type(1n+2) a:after {
+      font-size: 30px; } }
+  .level-1:nth-of-type(1n+2) a.collapsed:after {
+    content: "\002b"; }
+  @media (orientation: landscape) {
+    .level-1:nth-of-type(1n+2) a {
+      padding-top: 45px;
+      padding-bottom: 45px; } }
+  @media (orientation: landscape) and (max-width: 570px) {
+    .level-1:nth-of-type(1n+2) a {
+      padding-top: 38px;
+      padding-bottom: 38px; } }
+  @media (orientation: landscape) and (min-width: 736px) {
+    .level-1:nth-of-type(1n+2) a {
+      padding-top: 50px;
+      padding-bottom: 50px; } }
+  @media (orientation: landscape) and (min-width: 1024px) {
+    .level-1:nth-of-type(1n+2) a {
+      padding-top: 5px;
+      padding-bottom: 5px; } }
+
+  @media (width: 414px) {
+    .level-1:nth-of-type(1n+2) a {
+      padding-top: 34.5px;
+      padding-bottom: 34.5px; } }
+  @media (min-width: 768px) {
+    .level-1:nth-of-type(1n+2) a {
+      padding-top: 50px;
+      padding-bottom: 50px; } }
+
+.level-2 {
+  display: -webkit-flex;
+  display: flex;
+  border-top: 3px solid #942938;
+  background-color: #ad2f40; }
+  .level-2 p {
+    -webkit-flex-basis: 20%;
+    flex-basis: 20%;
+    text-align: center;
+    align-self: center;
+    font-size: 32px;
+    color: #f6d282; }
+    @media (width: 414px) {
+      .level-2 p {
+        font-size: 36.8px; } }
+    @media (min-width: 768px) {
+      .level-2 p {
+        font-size: 51.2px; } }
+    @media (orientation: landscape) {
+      .level-2 p {
+        font-size: 56px; } }
+  .level-2 h3 {
+    -webkit-flex-basis: 55%;
+    flex-basis: 55%;
+    font-size: 21px;
+    align-self: center; }
+    @media (min-width: 768px) {
+      .level-2 h3 {
+        -webkit-flex-basis: 60%;
+        flex-basis: 60%; } }
+    @media (width: 414px) {
+      .level-2 h3 {
+        font-size: 24.15px; } }
+    @media (min-width: 768px) {
+      .level-2 h3 {
+        font-size: 33.6px; } }
+    @media (orientation: landscape) {
+      .level-2 h3 {
+        -webkit-flex-basis: 60%;
+        flex-basis: 60%;
+        font-size: 38px; } }
+  .level-2 a {
+    -webkit-flex-basis: 25%;
+    flex-basis: 25%; }
+    @media (orientation: landscape) {
+      .level-2 a {
+        -webkit-flex-basis: 20%;
+        flex-basis: 20%; } }
+
+.level-3 {
+  display: -webkit-flex;
+  display: flex;
+  border-top: 3px solid #942938;
+  background-color: #ad2f40; }
+  .level-3 figure {
+    -webkit-flex-basis: 20%;
+    flex-basis: 20%; }
+  .level-3 figure[alt="1"] {
+    background: url("../img/icon/1.png") no-repeat 50% 50%;
+    -webkit-background-size: 60% auto;
+    -moz-background-size: 60% auto;
+    -o-background-size: 60% auto;
+    background-size: 60% auto; }
+    @media (min-width: 768px) {
+      .level-3 figure[alt="1"] {
+        -webkit-background-size: 50% auto;
+        -moz-background-size: 50% auto;
+        -o-background-size: 50% auto;
+        background-size: 50% auto; } }
+    @media (min-width: 1024px) {
+      .level-3 figure[alt="1"] {
+        -webkit-background-size: 40% auto;
+        -moz-background-size: 40% auto;
+        -o-background-size: 40% auto;
+        background-size: 40% auto; } }
+  .level-3 figure[alt="2"] {
+    background: url("../img/icon/2.png") no-repeat 50% 50%;
+    -webkit-background-size: 60% auto;
+    -moz-background-size: 60% auto;
+    -o-background-size: 60% auto;
+    background-size: 60% auto; }
+    @media (min-width: 768px) {
+      .level-3 figure[alt="2"] {
+        -webkit-background-size: 50% auto;
+        -moz-background-size: 50% auto;
+        -o-background-size: 50% auto;
+        background-size: 50% auto; } }
+    @media (min-width: 1024px) {
+      .level-3 figure[alt="2"] {
+        -webkit-background-size: 40% auto;
+        -moz-background-size: 40% auto;
+        -o-background-size: 40% auto;
+        background-size: 40% auto; } }
+  .level-3 figure[alt="3"] {
+    background: url("../img/icon/3.png") no-repeat 50% 50%;
+    -webkit-background-size: 60% auto;
+    -moz-background-size: 60% auto;
+    -o-background-size: 60% auto;
+    background-size: 60% auto; }
+    @media (min-width: 768px) {
+      .level-3 figure[alt="3"] {
+        -webkit-background-size: 50% auto;
+        -moz-background-size: 50% auto;
+        -o-background-size: 50% auto;
+        background-size: 50% auto; } }
+    @media (min-width: 1024px) {
+      .level-3 figure[alt="3"] {
+        -webkit-background-size: 40% auto;
+        -moz-background-size: 40% auto;
+        -o-background-size: 40% auto;
+        background-size: 40% auto; } }
+  .level-3 figure[alt="4"] {
+    background: url("../img/icon/4.png") no-repeat 50% 50%;
+    -webkit-background-size: 60% auto;
+    -moz-background-size: 60% auto;
+    -o-background-size: 60% auto;
+    background-size: 60% auto; }
+    @media (min-width: 768px) {
+      .level-3 figure[alt="4"] {
+        -webkit-background-size: 50% auto;
+        -moz-background-size: 50% auto;
+        -o-background-size: 50% auto;
+        background-size: 50% auto; } }
+    @media (min-width: 1024px) {
+      .level-3 figure[alt="4"] {
+        -webkit-background-size: 40% auto;
+        -moz-background-size: 40% auto;
+        -o-background-size: 40% auto;
+        background-size: 40% auto; } }
+  .level-3 figure[alt="5"] {
+    background: url("../img/icon/5.png") no-repeat 50% 50%;
+    -webkit-background-size: 60% auto;
+    -moz-background-size: 60% auto;
+    -o-background-size: 60% auto;
+    background-size: 60% auto; }
+    @media (min-width: 768px) {
+      .level-3 figure[alt="5"] {
+        -webkit-background-size: 50% auto;
+        -moz-background-size: 50% auto;
+        -o-background-size: 50% auto;
+        background-size: 50% auto; } }
+    @media (min-width: 1024px) {
+      .level-3 figure[alt="5"] {
+        -webkit-background-size: 40% auto;
+        -moz-background-size: 40% auto;
+        -o-background-size: 40% auto;
+        background-size: 40% auto; } }
+  .level-3 figure[alt="6"] {
+    background: url("../img/icon/6.png") no-repeat 50% 50%;
+    -webkit-background-size: 60% auto;
+    -moz-background-size: 60% auto;
+    -o-background-size: 60% auto;
+    background-size: 60% auto; }
+    @media (min-width: 768px) {
+      .level-3 figure[alt="6"] {
+        -webkit-background-size: 50% auto;
+        -moz-background-size: 50% auto;
+        -o-background-size: 50% auto;
+        background-size: 50% auto; } }
+    @media (min-width: 1024px) {
+      .level-3 figure[alt="6"] {
+        -webkit-background-size: 40% auto;
+        -moz-background-size: 40% auto;
+        -o-background-size: 40% auto;
+        background-size: 40% auto; } }
+  .level-3 figure[alt="7"] {
+    background: url("../img/icon/7.png") no-repeat 50% 50%;
+    -webkit-background-size: 60% auto;
+    -moz-background-size: 60% auto;
+    -o-background-size: 60% auto;
+    background-size: 60% auto; }
+    @media (min-width: 768px) {
+      .level-3 figure[alt="7"] {
+        -webkit-background-size: 50% auto;
+        -moz-background-size: 50% auto;
+        -o-background-size: 50% auto;
+        background-size: 50% auto; } }
+    @media (min-width: 1024px) {
+      .level-3 figure[alt="7"] {
+        -webkit-background-size: 40% auto;
+        -moz-background-size: 40% auto;
+        -o-background-size: 40% auto;
+        background-size: 40% auto; } }
+  .level-3 figure[alt="8"] {
+    background: url("../img/icon/8.png") no-repeat 50% 50%;
+    -webkit-background-size: 60% auto;
+    -moz-background-size: 60% auto;
+    -o-background-size: 60% auto;
+    background-size: 60% auto; }
+    @media (min-width: 768px) {
+      .level-3 figure[alt="8"] {
+        -webkit-background-size: 50% auto;
+        -moz-background-size: 50% auto;
+        -o-background-size: 50% auto;
+        background-size: 50% auto; } }
+    @media (min-width: 1024px) {
+      .level-3 figure[alt="8"] {
+        -webkit-background-size: 40% auto;
+        -moz-background-size: 40% auto;
+        -o-background-size: 40% auto;
+        background-size: 40% auto; } }
+  .level-3 figure[alt="9"] {
+    background: url("../img/icon/9.png") no-repeat 50% 50%;
+    -webkit-background-size: 60% auto;
+    -moz-background-size: 60% auto;
+    -o-background-size: 60% auto;
+    background-size: 60% auto; }
+    @media (min-width: 768px) {
+      .level-3 figure[alt="9"] {
+        -webkit-background-size: 50% auto;
+        -moz-background-size: 50% auto;
+        -o-background-size: 50% auto;
+        background-size: 50% auto; } }
+    @media (min-width: 1024px) {
+      .level-3 figure[alt="9"] {
+        -webkit-background-size: 40% auto;
+        -moz-background-size: 40% auto;
+        -o-background-size: 40% auto;
+        background-size: 40% auto; } }
+  .level-3 figure[alt="10"] {
+    background: url("../img/icon/10.png") no-repeat 50% 50%;
+    -webkit-background-size: 60% auto;
+    -moz-background-size: 60% auto;
+    -o-background-size: 60% auto;
+    background-size: 60% auto; }
+    @media (min-width: 768px) {
+      .level-3 figure[alt="10"] {
+        -webkit-background-size: 50% auto;
+        -moz-background-size: 50% auto;
+        -o-background-size: 50% auto;
+        background-size: 50% auto; } }
+    @media (min-width: 1024px) {
+      .level-3 figure[alt="10"] {
+        -webkit-background-size: 40% auto;
+        -moz-background-size: 40% auto;
+        -o-background-size: 40% auto;
+        background-size: 40% auto; } }
+  .level-3 figure[alt="11"] {
+    background: url("../img/icon/11.png") no-repeat 50% 50%;
+    -webkit-background-size: 60% auto;
+    -moz-background-size: 60% auto;
+    -o-background-size: 60% auto;
+    background-size: 60% auto; }
+    @media (min-width: 768px) {
+      .level-3 figure[alt="11"] {
+        -webkit-background-size: 50% auto;
+        -moz-background-size: 50% auto;
+        -o-background-size: 50% auto;
+        background-size: 50% auto; } }
+    @media (min-width: 1024px) {
+      .level-3 figure[alt="11"] {
+        -webkit-background-size: 40% auto;
+        -moz-background-size: 40% auto;
+        -o-background-size: 40% auto;
+        background-size: 40% auto; } }
+  .level-3 figure[alt="12"] {
+    background: url("../img/icon/12.png") no-repeat 50% 50%;
+    -webkit-background-size: 60% auto;
+    -moz-background-size: 60% auto;
+    -o-background-size: 60% auto;
+    background-size: 60% auto; }
+    @media (min-width: 768px) {
+      .level-3 figure[alt="12"] {
+        -webkit-background-size: 50% auto;
+        -moz-background-size: 50% auto;
+        -o-background-size: 50% auto;
+        background-size: 50% auto; } }
+    @media (min-width: 1024px) {
+      .level-3 figure[alt="12"] {
+        -webkit-background-size: 40% auto;
+        -moz-background-size: 40% auto;
+        -o-background-size: 40% auto;
+        background-size: 40% auto; } }
+  .level-3 figure[alt="13"] {
+    background: url("../img/icon/13.png") no-repeat 50% 50%;
+    -webkit-background-size: 60% auto;
+    -moz-background-size: 60% auto;
+    -o-background-size: 60% auto;
+    background-size: 60% auto; }
+    @media (min-width: 768px) {
+      .level-3 figure[alt="13"] {
+        -webkit-background-size: 50% auto;
+        -moz-background-size: 50% auto;
+        -o-background-size: 50% auto;
+        background-size: 50% auto; } }
+    @media (min-width: 1024px) {
+      .level-3 figure[alt="13"] {
+        -webkit-background-size: 40% auto;
+        -moz-background-size: 40% auto;
+        -o-background-size: 40% auto;
+        background-size: 40% auto; } }
+  .level-3 figure[alt="14"] {
+    background: url("../img/icon/14.png") no-repeat 50% 50%;
+    -webkit-background-size: 60% auto;
+    -moz-background-size: 60% auto;
+    -o-background-size: 60% auto;
+    background-size: 60% auto; }
+    @media (min-width: 768px) {
+      .level-3 figure[alt="14"] {
+        -webkit-background-size: 50% auto;
+        -moz-background-size: 50% auto;
+        -o-background-size: 50% auto;
+        background-size: 50% auto; } }
+    @media (min-width: 1024px) {
+      .level-3 figure[alt="14"] {
+        -webkit-background-size: 40% auto;
+        -moz-background-size: 40% auto;
+        -o-background-size: 40% auto;
+        background-size: 40% auto; } }
+  .level-3 figure[alt="15"] {
+    background: url("../img/icon/15.png") no-repeat 50% 50%;
+    -webkit-background-size: 60% auto;
+    -moz-background-size: 60% auto;
+    -o-background-size: 60% auto;
+    background-size: 60% auto; }
+    @media (min-width: 768px) {
+      .level-3 figure[alt="15"] {
+        -webkit-background-size: 50% auto;
+        -moz-background-size: 50% auto;
+        -o-background-size: 50% auto;
+        background-size: 50% auto; } }
+    @media (min-width: 1024px) {
+      .level-3 figure[alt="15"] {
+        -webkit-background-size: 40% auto;
+        -moz-background-size: 40% auto;
+        -o-background-size: 40% auto;
+        background-size: 40% auto; } }
+  .level-3 figure[alt="16"] {
+    background: url("../img/icon/16.png") no-repeat 50% 50%;
+    -webkit-background-size: 60% auto;
+    -moz-background-size: 60% auto;
+    -o-background-size: 60% auto;
+    background-size: 60% auto; }
+    @media (min-width: 768px) {
+      .level-3 figure[alt="16"] {
+        -webkit-background-size: 50% auto;
+        -moz-background-size: 50% auto;
+        -o-background-size: 50% auto;
+        background-size: 50% auto; } }
+    @media (min-width: 1024px) {
+      .level-3 figure[alt="16"] {
+        -webkit-background-size: 40% auto;
+        -moz-background-size: 40% auto;
+        -o-background-size: 40% auto;
+        background-size: 40% auto; } }
+  .level-3 figure[alt="17"] {
+    background: url("../img/icon/17.png") no-repeat 50% 50%;
+    -webkit-background-size: 60% auto;
+    -moz-background-size: 60% auto;
+    -o-background-size: 60% auto;
+    background-size: 60% auto; }
+    @media (min-width: 768px) {
+      .level-3 figure[alt="17"] {
+        -webkit-background-size: 50% auto;
+        -moz-background-size: 50% auto;
+        -o-background-size: 50% auto;
+        background-size: 50% auto; } }
+    @media (min-width: 1024px) {
+      .level-3 figure[alt="17"] {
+        -webkit-background-size: 40% auto;
+        -moz-background-size: 40% auto;
+        -o-background-size: 40% auto;
+        background-size: 40% auto; } }
+  .level-3 figure[alt="18"] {
+    background: url("../img/icon/18.png") no-repeat 50% 50%;
+    -webkit-background-size: 60% auto;
+    -moz-background-size: 60% auto;
+    -o-background-size: 60% auto;
+    background-size: 60% auto; }
+    @media (min-width: 768px) {
+      .level-3 figure[alt="18"] {
+        -webkit-background-size: 50% auto;
+        -moz-background-size: 50% auto;
+        -o-background-size: 50% auto;
+        background-size: 50% auto; } }
+    @media (min-width: 1024px) {
+      .level-3 figure[alt="18"] {
+        -webkit-background-size: 40% auto;
+        -moz-background-size: 40% auto;
+        -o-background-size: 40% auto;
+        background-size: 40% auto; } }
+  .level-3 figure[alt="19"] {
+    background: url("../img/icon/19.png") no-repeat 50% 50%;
+    -webkit-background-size: 60% auto;
+    -moz-background-size: 60% auto;
+    -o-background-size: 60% auto;
+    background-size: 60% auto; }
+    @media (min-width: 768px) {
+      .level-3 figure[alt="19"] {
+        -webkit-background-size: 50% auto;
+        -moz-background-size: 50% auto;
+        -o-background-size: 50% auto;
+        background-size: 50% auto; } }
+    @media (min-width: 1024px) {
+      .level-3 figure[alt="19"] {
+        -webkit-background-size: 40% auto;
+        -moz-background-size: 40% auto;
+        -o-background-size: 40% auto;
+        background-size: 40% auto; } }
+  .level-3 figure[alt="20"] {
+    background: url("../img/icon/20.png") no-repeat 50% 50%;
+    -webkit-background-size: 60% auto;
+    -moz-background-size: 60% auto;
+    -o-background-size: 60% auto;
+    background-size: 60% auto; }
+    @media (min-width: 768px) {
+      .level-3 figure[alt="20"] {
+        -webkit-background-size: 50% auto;
+        -moz-background-size: 50% auto;
+        -o-background-size: 50% auto;
+        background-size: 50% auto; } }
+    @media (min-width: 1024px) {
+      .level-3 figure[alt="20"] {
+        -webkit-background-size: 40% auto;
+        -moz-background-size: 40% auto;
+        -o-background-size: 40% auto;
+        background-size: 40% auto; } }
+  .level-3 figure[alt="21"] {
+    background: url("../img/icon/21.png") no-repeat 50% 50%;
+    -webkit-background-size: 60% auto;
+    -moz-background-size: 60% auto;
+    -o-background-size: 60% auto;
+    background-size: 60% auto; }
+    @media (min-width: 768px) {
+      .level-3 figure[alt="21"] {
+        -webkit-background-size: 50% auto;
+        -moz-background-size: 50% auto;
+        -o-background-size: 50% auto;
+        background-size: 50% auto; } }
+    @media (min-width: 1024px) {
+      .level-3 figure[alt="21"] {
+        -webkit-background-size: 40% auto;
+        -moz-background-size: 40% auto;
+        -o-background-size: 40% auto;
+        background-size: 40% auto; } }
+  .level-3 figure[alt="22"] {
+    background: url("../img/icon/22.png") no-repeat 50% 50%;
+    -webkit-background-size: 60% auto;
+    -moz-background-size: 60% auto;
+    -o-background-size: 60% auto;
+    background-size: 60% auto; }
+    @media (min-width: 768px) {
+      .level-3 figure[alt="22"] {
+        -webkit-background-size: 50% auto;
+        -moz-background-size: 50% auto;
+        -o-background-size: 50% auto;
+        background-size: 50% auto; } }
+    @media (min-width: 1024px) {
+      .level-3 figure[alt="22"] {
+        -webkit-background-size: 40% auto;
+        -moz-background-size: 40% auto;
+        -o-background-size: 40% auto;
+        background-size: 40% auto; } }
+  .level-3 h3 {
+    -webkit-flex-basis: 55%;
+    flex-basis: 55%;
+    font-size: 1.10em;
+    line-height: 130%;
+    align-self: center; }
+    @media (min-width: 768px) {
+      .level-3 h3 {
+        -webkit-flex-basis: 60%;
+        flex-basis: 60%; } }
+    @media (width: 414px) {
+      .level-3 h3 {
+        font-size: 1.334em; } }
+    @media (orientation: landscape) {
+      .level-3 h3 {
+        -webkit-flex-basis: 60%;
+        flex-basis: 60%;
+        font-size: 2em; } }
+  @media (orientation: landscape) and (max-width: 570px) {
+    .level-3 h3 {
+      font-size: 1.776em; } }
+  @media (orientation: landscape) and (min-width: 736px) {
+    .level-3 h3 {
+      font-size: 2.3em; } }
+
+    @media (max-width: 320px) {
+      .level-3 h3 {
+        font-size: 1.0324em; } }
+    @media (min-width: 768px) {
+      .level-3 h3 {
+        font-size: 1.856em; } }
+    @media (min-width: 1024px) {
+      .level-3 h3 {
+        font-size: 2.15em; } }
+  .level-3 > a:first-of-type {
+    -webkit-flex-basis: 25%;
+    flex-basis: 25%;
+    padding-top: 32px;
+    padding-bottom: 32px; }
+    @media (orientation: landscape) {
+      .level-3 > a:first-of-type {
+        -webkit-flex-basis: 20%;
+        flex-basis: 20%; } }
+    @media (min-width: 768px) {
+      .level-3 > a:first-of-type {
+        -webkit-flex-basis: 20%;
+        flex-basis: 20%; } }
+    @media (orientation: landscape) {
+      .level-3 > a:first-of-type {
+        padding-top: 45px;
+        padding-bottom: 45px; } }
+    @media (min-width: 768px) {
+      .level-3 > a:first-of-type {
+        padding-top: 50px;
+        padding-bottom: 50px; } }
+
+p.level-3 {
+  background-color: white;
+  color: black;
+  font-family: serif;
+  font-size: 21px;
+  line-height: 120%;
+  text-indent: 25px;
+  border-top: none;
+  padding: 15px; }
+  @media (max-width: 320px) {
+    p.level-3 {
+      font-size: 18.9px; } }
+  @media (width: 414px) {
+    p.level-3 {
+      font-size: 24.15px; } }
+  @media (orientation: landscape) {
+    p.level-3 {
+      font-size: 38px; } }
+  @media (orientation: landscape) and (max-width: 570px) {
+    p.level-3 {
+      font-size: 33.744px; } }
+  @media (orientation: landscape) and (min-width: 736px) {
+    p.level-3 {
+      font-size: 43.7px; } }
+  @media (orientation: landscape) and (min-width: 768px) {
+    p.level-3 {
+      font-size: 33.6px;
+      line-height: 130%; } }
+  @media (orientation: landscape) and (min-width: 1024px) {
+    p.level-3 {
+      font-size: 38px; } }
+
+  p.level-3 ~ p.level-3 {
+    padding-top: 0;
+    margin-top: -10px; }
+
+ol.order-list {
+  background-color: white;
+  color: black;
+  font-family: serif;
+  font-size: 21px;
+  line-height: 120%;
+  text-indent: 25px;
+  border-top: none;
+  padding: 15px;
+  margin-top: -25px; }
+  @media (orientation: landscape) {
+    ol.order-list {
+      font-size: 38px; } }
+  @media (orientation: landscape) and (max-width: 570px) {
+    ol.order-list {
+      font-size: 33.744px; } }
+  @media (orientation: landscape) and (min-width: 736px) {
+    ol.order-list {
+      font-size: 43.7px; } }
+
+  @media (max-width: 320px) {
+    ol.order-list {
+      font-size: 18.9px; } }
+  @media (width: 414px) {
+    ol.order-list {
+      font-size: 24.15px; } }
+  @media (min-width: 768px) {
+    ol.order-list {
+      font-size: 33.6px; } }
+  @media (min-width: 1024px) {
+    ol.order-list {
+      font-size: 38px; } }
+
+.level-4 {
+  display: -webkit-flex;
+  display: flex;
+  background-color: #942938; }
+  .level-4 figure {
+    -webkit-flex-basis: 20%;
+    flex-basis: 20%; }
+  .level-4 > figure.boys {
+    background: url(../img/empty_wh.png) no-repeat 50% 50%;
+    -webkit-background-size: 45% auto;
+    -moz-background-size: 45% auto;
+    -o-background-size: 45% auto;
+    background-size: 45% auto; }
+  .level-4 > figure.girls {
+    background: url(../img/empty_wh.png) no-repeat 50% 50%;
+    -webkit-background-size: 45% auto;
+    -moz-background-size: 45% auto;
+    -o-background-size: 45% auto;
+    background-size: 45% auto; }
+  .level-4 > figure.man {
+    background: url(../img/empty_wh.png) no-repeat 50% 50%;
+    -webkit-background-size: 45% auto;
+    -moz-background-size: 45% auto;
+    -o-background-size: 45% auto;
+    background-size: 45% auto; }
+  .level-4 > figure.woman {
+    background: url(../img/empty_wh.png) no-repeat 50% 50%;
+    -webkit-background-size: 45% auto;
+    -moz-background-size: 45% auto;
+    -o-background-size: 45% auto;
+    background-size: 45% auto; }
+  .level-4 > figure.empty {
+    background: url(../img/empty_wh.png) no-repeat 50% 50%;
+    -webkit-background-size: 45% auto;
+    -moz-background-size: 45% auto;
+    -o-background-size: 45% auto;
+    background-size: 45% auto; }
+  .level-4 h4 {
+    -webkit-flex-basis: 55%;
+    flex-basis: 55%;
+    font-size: 21px;
+    align-self: center; }
+    @media (orientation: landscape) {
+      .level-4 h4 {
+        -webkit-flex-basis: 60%;
+        flex-basis: 60%; } }
+    @media (min-width: 768px) {
+      .level-4 h4 {
+        -webkit-flex-basis: 60%;
+        flex-basis: 60%; } }
+    @media (width: 414px) {
+      .level-4 h4 {
+        font-size: 24.15px; } }
+    @media (min-width: 768px) {
+      .level-4 h4 {
+        font-size: 33.6px; } }
+    @media (orientation: landscape) {
+      .level-4 h4 {
+        font-size: 38px; } }
+  .level-4 > a:first-of-type {
+    -webkit-flex-basis: 25%;
+    flex-basis: 25%; }
+    @media (orientation: landscape) {
+      .level-4 > a:first-of-type {
+        -webkit-flex-basis: 20%;
+        flex-basis: 20%; } }
+    @media (min-width: 768px) {
+      .level-4 > a:first-of-type {
+        -webkit-flex-basis: 20%;
+        flex-basis: 20%; } }
+    .level-4 > a:first-of-type:active {
+      background-color: #660000; }
+
+/* TABLE main styles - start*/
+table, tbody, tr, td {
+  display: block; }
+
+tr.flex-row {
+  background-color: white;
+  color: black;
+  display: -webkit-flex;
+  display: flex; }
+  tr.flex-row td {
+    margin: 0 2px 0 2px;
+    -webkit-flex-grow: 1;
+    flex-grow: 1; }
+    tr.flex-row td:first-of-type {
+      -webkit-flex-basis: 8%;
+      flex-basis: 8%;
+      display: -webkit-flex;
+      display: flex; }
+      tr.flex-row td:first-of-type.total-0 {
+        -webkit-flex-basis: 0%;
+        flex-basis: 0%; }
+    tr.flex-row td:only-child {
+      padding-top: 5px;
+      padding-bottom: 5px; }
+    tr.flex-row td:nth-of-type(2) {
+      -webkit-flex-basis: 45.5%;
+      flex-basis: 45.5%;
+      display: -webkit-flex;
+      display: flex;
+      padding-top: 8px;
+      padding-bottom: 8px; }
+      tr.flex-row td:nth-of-type(2).total {
+        -webkit-flex-basis: 53.5%;
+        flex-basis: 53.5%; }
+    tr.flex-row td:nth-of-type(1n+3) {
+      -webkit-flex-basis: 15.5%;
+      flex-basis: 15.5%;
+      display: -webkit-flex;
+      display: flex; }
+    tr.flex-row td:nth-of-type(3) {
+      background-color: #ffd39b; }
+    tr.flex-row td:nth-of-type(3).colspan-3 {
+      -webkit-flex-basis: 49%;
+      flex-basis: 49%;
+      background-color: white; }
+      tr.flex-row td:nth-of-type(3).colspan-3.single-gold {
+        background-color: #FFEBCD; }
+    tr.flex-row td:nth-of-type(3).colspan-2 {
+      -webkit-flex-basis: 32%;
+      flex-basis: 32%;
+      background-color: white; }
+      tr.flex-row td:nth-of-type(3).colspan-2 ~ td {
+        background-color: #FFEBCD;
+        padding: 0; }
+        tr.flex-row td:nth-of-type(3).colspan-2 ~ td span {
+          line-height: 1;
+          font-size: 11px; }
+          @media (orientation: landscape) {
+            tr.flex-row td:nth-of-type(3).colspan-2 ~ td span {
+              font-size: 20px; } }
+  @media (orientation: landscape) and (max-width: 570px) {
+    tr.flex-row td:nth-of-type(3).colspan-2 ~ td span {
+      font-size: 18px; } }
+
+          @media (max-width: 320px) {
+            tr.flex-row td:nth-of-type(3).colspan-2 ~ td span {
+              font-size: 9.768px; } }
+          @media (min-width: 768px) {
+            tr.flex-row td:nth-of-type(3).colspan-2 ~ td span {
+              font-size: 23px; } }
+          tr.flex-row td:nth-of-type(3).colspan-2 ~ td span.font-inh {
+            font-size: 21px; }
+            @media (orientation: landscape) {
+              tr.flex-row td:nth-of-type(3).colspan-2 ~ td span.font-inh {
+                font-size: 38px; } }
+  @media (orientation: landscape) and (max-width: 570px) {
+    tr.flex-row td:nth-of-type(3).colspan-2 ~ td span.font-inh {
+      font-size: 33.744px; } }
+  @media (orientation: landscape) and (min-width: 736px) {
+    tr.flex-row td:nth-of-type(3).colspan-2 ~ td span.font-inh {
+      font-size: 43.7px; } }
+
+            @media (max-width: 320px) {
+              tr.flex-row td:nth-of-type(3).colspan-2 ~ td span.font-inh {
+                font-size: 18.648px; } }
+            @media (min-width: 768px) {
+              tr.flex-row td:nth-of-type(3).colspan-2 ~ td span.font-inh {
+                font-size: 33.6px; } }
+    tr.flex-row td:nth-of-type(4) {
+      background-color: #eee9e9; }
+    tr.flex-row td:nth-of-type(5) {
+      background-color: #FFEBCD; }
+    tr.flex-row td span {
+      -webkit-flex-grow: 1;
+      flex-grow: 1;
+      font-size: 21px;
+      text-align: center;
+      align-self: center; }
+      @media (width: 414px) {
+        tr.flex-row td span {
+          font-size: 24.15px; } }
+      @media (orientation: landscape) {
+        tr.flex-row td span {
+          font-size: 38px; } }
+  @media (orientation: landscape) and (max-width: 570px) {
+    tr.flex-row td span {
+      font-size: 33.744px; } }
+  @media (orientation: landscape) and (min-width: 736px) {
+    tr.flex-row td span {
+      font-size: 43.7px; } }
+
+      @media (max-width: 320px) {
+        tr.flex-row td span {
+          font-size: 18.648px; } }
+      @media (min-width: 768px) {
+        tr.flex-row td span {
+          font-size: 33.6px; } }
+      tr.flex-row td span.font-sm {
+        font-size: 11px; }
+        @media (orientation: landscape) {
+          tr.flex-row td span.font-sm {
+            font-size: 20px; } }
+  @media (orientation: landscape) and (max-width: 570px) {
+    tr.flex-row td span.font-sm {
+      font-size: 17.76px; } }
+  @media (orientation: landscape) and (min-width: 736px) {
+    tr.flex-row td span.font-sm {
+      font-size: 23px; } }
+
+        @media (max-width: 320px) {
+          tr.flex-row td span.font-sm {
+            font-size: 9.768px; } }
+        @media (min-width: 768px) {
+          tr.flex-row td span.font-sm {
+            font-size: 23px; } }
+    tr.flex-row td span.text-left {
+      text-align: left; }
+
+/* TABLE main styles - end*/
+/*table header styles - start*/
+tr.flex-row > td.header {
+  padding-top: 8px;
+  padding-bottom: 8px; }
+  @media (min-width: 768px) {
+    tr.flex-row > td.header {
+      padding-top: 20px;
+      padding-bottom: 20px; } }
+  @media (min-width: 1024px) {
+    tr.flex-row > td.header {
+      padding-top: 30px;
+      padding-bottom: 30px; } }
+
+tr.flex-row td.bronze {
+  background-color: white; }
+tr.flex-row td.silver {
+  background-color: white; }
+tr.flex-row td.gold {
+  background-color: white; }
+
+.bronze {
+  background: url(../img/bronze-tr.png) no-repeat 50% 50%;
+  -webkit-background-size: auto 75%;
+  -moz-background-size: auto 75%;
+  -o-background-size: auto 75%;
+  background-size: auto 75%; }
+
+.silver {
+  background: url(../img/silver-tr.png) no-repeat 50% 50%;
+  -webkit-background-size: auto 75%;
+  -moz-background-size: auto 75%;
+  -o-background-size: auto 75%;
+  background-size: auto 75%; }
+
+.gold {
+  background: url(../img/gold-tr.png) no-repeat 50% 50%;
+  -webkit-background-size: auto 75%;
+  -moz-background-size: auto 75%;
+  -o-background-size: auto 75%;
+  background-size: auto 75%; }
+
+/*table header styles - end*/
+/*table inner border styles - start*/
+tr.flex-row.border {
+  border-bottom: 1px solid #c53649; }
+
+.bordershot td:nth-of-type(1n+2) {
+  border-bottom: 1px solid #c53649; }
+
+/*table inner border styles - end*/
+/*LAPTOP styles*/
+@media (min-width: 1200px) {
+  .level-1:first-of-type {
+    background-image: none; } }
+  @media (min-width: 1200px) and (max-width: 1280px) {
+    .level-1:first-of-type {
+      background: url("../img/border.png") repeat-x 0 100%;
+      -webkit-background-size: 2% auto;
+      -moz-background-size: 2% auto;
+      -o-background-size: 2% auto;
+      background-size: 2% auto; } }
+  @media (min-width: 1200px) and (min-width: 1800px) {
+    .level-1:first-of-type {
+      background: url("../img/border.png") repeat-x 0 100%;
+      -webkit-background-size: 1.5% auto;
+      -moz-background-size: 1.5% auto;
+      -o-background-size: 1.5% auto;
+      background-size: 1.5% auto; } }
+
+@media (min-width: 1200px) {
+  #accordion li > nav {
+    display: none; }
+
+  header.flex-container {
+    box-sizing: border-box;
+    max-width: 1170px;
+    margin: 0px auto 0 auto;
+    display: -webkit-flex;
+    display: flex;
+    padding-top: 25px; } }
+  @media (min-width: 1200px) and (max-width: 1280px) {
+    header.flex-container {
+      margin-top: 30px;
+      margin-bottom: 40px; } }
+  @media (min-width: 1200px) and (min-width: 1550px) {
+    header.flex-container {
+      margin-top: 30px;
+      margin-bottom: 0px; } }
+  @media (min-width: 1200px) and (min-width: 1800px) {
+    header.flex-container {
+      margin-top: 70px;
+      margin-bottom: 0px; } }
+
+@media (min-width: 1200px) {
+  .tests {
+    -webkit-flex-basis: 294px;
+    flex-basis: 294px;
+    -webkit-order: 3;
+    order: 3; }
+    .tests h2 {
+      font-size: 22px;
+      text-transform: uppercase; }
+    .tests ul {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      .tests ul > li {
+        box-sizing: border-box;
+        height: 68px;
+        -webkit-flex-basis: 68px;
+        flex-basis: 68px;
+        margin-right: 30px;
+        margin-top: 15px;
+        background-size: 80% auto;
+        border-radius: 6px;
+        display: -webkit-flex;
+        display: flex; }
+        .tests ul > li[alt="1"] {
+          background: url("../img/icon/1.png") no-repeat 50% 50%;
+          -webkit-background-size: 80% auto;
+          -moz-background-size: 80% auto;
+          -o-background-size: 80% auto;
+          background-size: 80% auto;
+          -webkit-transition-property: background;
+          -webkit-transition-duration: 0.5s;
+          transition-property: background;
+          transition-duration: 0.5s; }
+          .tests ul > li[alt="1"]:hover {
+            background-color: white;
+            background-image: url("../img/icon/1-hover.png");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            -webkit-background-size: 80% auto;
+            -moz-background-size: 80% auto;
+            -o-background-size: 80% auto;
+            background-size: 80% auto; }
+        .tests ul > li[alt="2"] {
+          background: url("../img/icon/2.png") no-repeat 50% 50%;
+          -webkit-background-size: 80% auto;
+          -moz-background-size: 80% auto;
+          -o-background-size: 80% auto;
+          background-size: 80% auto;
+          -webkit-transition-property: background;
+          -webkit-transition-duration: 0.5s;
+          transition-property: background;
+          transition-duration: 0.5s; }
+          .tests ul > li[alt="2"]:hover {
+            background-color: white;
+            background-image: url("../img/icon/2-hover.png");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            -webkit-background-size: 80% auto;
+            -moz-background-size: 80% auto;
+            -o-background-size: 80% auto;
+            background-size: 80% auto; }
+        .tests ul > li[alt="3"] {
+          background: url("../img/icon/3.png") no-repeat 50% 50%;
+          -webkit-background-size: 80% auto;
+          -moz-background-size: 80% auto;
+          -o-background-size: 80% auto;
+          background-size: 80% auto;
+          -webkit-transition-property: background;
+          -webkit-transition-duration: 0.5s;
+          transition-property: background;
+          transition-duration: 0.5s; }
+          .tests ul > li[alt="3"]:hover {
+            background-color: white;
+            background-image: url("../img/icon/3-hover.png");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            -webkit-background-size: 80% auto;
+            -moz-background-size: 80% auto;
+            -o-background-size: 80% auto;
+            background-size: 80% auto; }
+        .tests ul > li[alt="4"] {
+          background: url("../img/icon/4.png") no-repeat 50% 50%;
+          -webkit-background-size: 80% auto;
+          -moz-background-size: 80% auto;
+          -o-background-size: 80% auto;
+          background-size: 80% auto;
+          -webkit-transition-property: background;
+          -webkit-transition-duration: 0.5s;
+          transition-property: background;
+          transition-duration: 0.5s; }
+          .tests ul > li[alt="4"]:hover {
+            background-color: white;
+            background-image: url("../img/icon/4-hover.png");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            -webkit-background-size: 80% auto;
+            -moz-background-size: 80% auto;
+            -o-background-size: 80% auto;
+            background-size: 80% auto; }
+        .tests ul > li[alt="5"] {
+          background: url("../img/icon/5.png") no-repeat 50% 50%;
+          -webkit-background-size: 80% auto;
+          -moz-background-size: 80% auto;
+          -o-background-size: 80% auto;
+          background-size: 80% auto;
+          -webkit-transition-property: background;
+          -webkit-transition-duration: 0.5s;
+          transition-property: background;
+          transition-duration: 0.5s; }
+          .tests ul > li[alt="5"]:hover {
+            background-color: white;
+            background-image: url("../img/icon/5-hover.png");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            -webkit-background-size: 80% auto;
+            -moz-background-size: 80% auto;
+            -o-background-size: 80% auto;
+            background-size: 80% auto; }
+        .tests ul > li[alt="6"] {
+          background: url("../img/icon/6.png") no-repeat 50% 50%;
+          -webkit-background-size: 80% auto;
+          -moz-background-size: 80% auto;
+          -o-background-size: 80% auto;
+          background-size: 80% auto;
+          -webkit-transition-property: background;
+          -webkit-transition-duration: 0.5s;
+          transition-property: background;
+          transition-duration: 0.5s; }
+          .tests ul > li[alt="6"]:hover {
+            background-color: white;
+            background-image: url("../img/icon/6-hover.png");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            -webkit-background-size: 80% auto;
+            -moz-background-size: 80% auto;
+            -o-background-size: 80% auto;
+            background-size: 80% auto; }
+        .tests ul > li[alt="7"] {
+          background: url("../img/icon/7.png") no-repeat 50% 50%;
+          -webkit-background-size: 80% auto;
+          -moz-background-size: 80% auto;
+          -o-background-size: 80% auto;
+          background-size: 80% auto;
+          -webkit-transition-property: background;
+          -webkit-transition-duration: 0.5s;
+          transition-property: background;
+          transition-duration: 0.5s; }
+          .tests ul > li[alt="7"]:hover {
+            background-color: white;
+            background-image: url("../img/icon/7-hover.png");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            -webkit-background-size: 80% auto;
+            -moz-background-size: 80% auto;
+            -o-background-size: 80% auto;
+            background-size: 80% auto; }
+        .tests ul > li[alt="8"] {
+          background: url("../img/icon/8.png") no-repeat 50% 50%;
+          -webkit-background-size: 80% auto;
+          -moz-background-size: 80% auto;
+          -o-background-size: 80% auto;
+          background-size: 80% auto;
+          -webkit-transition-property: background;
+          -webkit-transition-duration: 0.5s;
+          transition-property: background;
+          transition-duration: 0.5s; }
+          .tests ul > li[alt="8"]:hover {
+            background-color: white;
+            background-image: url("../img/icon/8-hover.png");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            -webkit-background-size: 80% auto;
+            -moz-background-size: 80% auto;
+            -o-background-size: 80% auto;
+            background-size: 80% auto; }
+        .tests ul > li[alt="9"] {
+          background: url("../img/icon/9.png") no-repeat 50% 50%;
+          -webkit-background-size: 80% auto;
+          -moz-background-size: 80% auto;
+          -o-background-size: 80% auto;
+          background-size: 80% auto;
+          -webkit-transition-property: background;
+          -webkit-transition-duration: 0.5s;
+          transition-property: background;
+          transition-duration: 0.5s; }
+          .tests ul > li[alt="9"]:hover {
+            background-color: white;
+            background-image: url("../img/icon/9-hover.png");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            -webkit-background-size: 80% auto;
+            -moz-background-size: 80% auto;
+            -o-background-size: 80% auto;
+            background-size: 80% auto; }
+        .tests ul > li[alt="10"] {
+          background: url("../img/icon/10.png") no-repeat 50% 50%;
+          -webkit-background-size: 80% auto;
+          -moz-background-size: 80% auto;
+          -o-background-size: 80% auto;
+          background-size: 80% auto;
+          -webkit-transition-property: background;
+          -webkit-transition-duration: 0.5s;
+          transition-property: background;
+          transition-duration: 0.5s; }
+          .tests ul > li[alt="10"]:hover {
+            background-color: white;
+            background-image: url("../img/icon/10-hover.png");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            -webkit-background-size: 80% auto;
+            -moz-background-size: 80% auto;
+            -o-background-size: 80% auto;
+            background-size: 80% auto; }
+        .tests ul > li[alt="11"] {
+          background: url("../img/icon/11.png") no-repeat 50% 50%;
+          -webkit-background-size: 80% auto;
+          -moz-background-size: 80% auto;
+          -o-background-size: 80% auto;
+          background-size: 80% auto;
+          -webkit-transition-property: background;
+          -webkit-transition-duration: 0.5s;
+          transition-property: background;
+          transition-duration: 0.5s; }
+          .tests ul > li[alt="11"]:hover {
+            background-color: white;
+            background-image: url("../img/icon/11-hover.png");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            -webkit-background-size: 80% auto;
+            -moz-background-size: 80% auto;
+            -o-background-size: 80% auto;
+            background-size: 80% auto; }
+        .tests ul > li[alt="12"] {
+          background: url("../img/icon/12.png") no-repeat 50% 50%;
+          -webkit-background-size: 80% auto;
+          -moz-background-size: 80% auto;
+          -o-background-size: 80% auto;
+          background-size: 80% auto;
+          -webkit-transition-property: background;
+          -webkit-transition-duration: 0.5s;
+          transition-property: background;
+          transition-duration: 0.5s; }
+          .tests ul > li[alt="12"]:hover {
+            background-color: white;
+            background-image: url("../img/icon/12-hover.png");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            -webkit-background-size: 80% auto;
+            -moz-background-size: 80% auto;
+            -o-background-size: 80% auto;
+            background-size: 80% auto; }
+        .tests ul > li[alt="13"] {
+          background: url("../img/icon/13.png") no-repeat 50% 50%;
+          -webkit-background-size: 80% auto;
+          -moz-background-size: 80% auto;
+          -o-background-size: 80% auto;
+          background-size: 80% auto;
+          -webkit-transition-property: background;
+          -webkit-transition-duration: 0.5s;
+          transition-property: background;
+          transition-duration: 0.5s; }
+          .tests ul > li[alt="13"]:hover {
+            background-color: white;
+            background-image: url("../img/icon/13-hover.png");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            -webkit-background-size: 80% auto;
+            -moz-background-size: 80% auto;
+            -o-background-size: 80% auto;
+            background-size: 80% auto; }
+        .tests ul > li[alt="14"] {
+          background: url("../img/icon/14.png") no-repeat 50% 50%;
+          -webkit-background-size: 80% auto;
+          -moz-background-size: 80% auto;
+          -o-background-size: 80% auto;
+          background-size: 80% auto;
+          -webkit-transition-property: background;
+          -webkit-transition-duration: 0.5s;
+          transition-property: background;
+          transition-duration: 0.5s; }
+          .tests ul > li[alt="14"]:hover {
+            background-color: white;
+            background-image: url("../img/icon/14-hover.png");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            -webkit-background-size: 80% auto;
+            -moz-background-size: 80% auto;
+            -o-background-size: 80% auto;
+            background-size: 80% auto; }
+        .tests ul > li[alt="15"] {
+          background: url("../img/icon/15.png") no-repeat 50% 50%;
+          -webkit-background-size: 80% auto;
+          -moz-background-size: 80% auto;
+          -o-background-size: 80% auto;
+          background-size: 80% auto;
+          -webkit-transition-property: background;
+          -webkit-transition-duration: 0.5s;
+          transition-property: background;
+          transition-duration: 0.5s; }
+          .tests ul > li[alt="15"]:hover {
+            background-color: white;
+            background-image: url("../img/icon/15-hover.png");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            -webkit-background-size: 80% auto;
+            -moz-background-size: 80% auto;
+            -o-background-size: 80% auto;
+            background-size: 80% auto; }
+        .tests ul > li[alt="16"] {
+          background: url("../img/icon/16.png") no-repeat 50% 50%;
+          -webkit-background-size: 80% auto;
+          -moz-background-size: 80% auto;
+          -o-background-size: 80% auto;
+          background-size: 80% auto;
+          -webkit-transition-property: background;
+          -webkit-transition-duration: 0.5s;
+          transition-property: background;
+          transition-duration: 0.5s; }
+          .tests ul > li[alt="16"]:hover {
+            background-color: white;
+            background-image: url("../img/icon/16-hover.png");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            -webkit-background-size: 80% auto;
+            -moz-background-size: 80% auto;
+            -o-background-size: 80% auto;
+            background-size: 80% auto; }
+        .tests ul > li[alt="17"] {
+          background: url("../img/icon/17.png") no-repeat 50% 50%;
+          -webkit-background-size: 80% auto;
+          -moz-background-size: 80% auto;
+          -o-background-size: 80% auto;
+          background-size: 80% auto;
+          -webkit-transition-property: background;
+          -webkit-transition-duration: 0.5s;
+          transition-property: background;
+          transition-duration: 0.5s; }
+          .tests ul > li[alt="17"]:hover {
+            background-color: white;
+            background-image: url("../img/icon/17-hover.png");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            -webkit-background-size: 80% auto;
+            -moz-background-size: 80% auto;
+            -o-background-size: 80% auto;
+            background-size: 80% auto; }
+        .tests ul > li[alt="18"] {
+          background: url("../img/icon/18.png") no-repeat 50% 50%;
+          -webkit-background-size: 80% auto;
+          -moz-background-size: 80% auto;
+          -o-background-size: 80% auto;
+          background-size: 80% auto;
+          -webkit-transition-property: background;
+          -webkit-transition-duration: 0.5s;
+          transition-property: background;
+          transition-duration: 0.5s; }
+          .tests ul > li[alt="18"]:hover {
+            background-color: white;
+            background-image: url("../img/icon/18-hover.png");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            -webkit-background-size: 80% auto;
+            -moz-background-size: 80% auto;
+            -o-background-size: 80% auto;
+            background-size: 80% auto; }
+        .tests ul > li[alt="19"] {
+          background: url("../img/icon/19.png") no-repeat 50% 50%;
+          -webkit-background-size: 80% auto;
+          -moz-background-size: 80% auto;
+          -o-background-size: 80% auto;
+          background-size: 80% auto;
+          -webkit-transition-property: background;
+          -webkit-transition-duration: 0.5s;
+          transition-property: background;
+          transition-duration: 0.5s; }
+          .tests ul > li[alt="19"]:hover {
+            background-color: white;
+            background-image: url("../img/icon/19-hover.png");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            -webkit-background-size: 80% auto;
+            -moz-background-size: 80% auto;
+            -o-background-size: 80% auto;
+            background-size: 80% auto; }
+        .tests ul > li[alt="20"] {
+          background: url("../img/icon/20.png") no-repeat 50% 50%;
+          -webkit-background-size: 80% auto;
+          -moz-background-size: 80% auto;
+          -o-background-size: 80% auto;
+          background-size: 80% auto;
+          -webkit-transition-property: background;
+          -webkit-transition-duration: 0.5s;
+          transition-property: background;
+          transition-duration: 0.5s; }
+          .tests ul > li[alt="20"]:hover {
+            background-color: white;
+            background-image: url("../img/icon/20-hover.png");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            -webkit-background-size: 80% auto;
+            -moz-background-size: 80% auto;
+            -o-background-size: 80% auto;
+            background-size: 80% auto; }
+        .tests ul > li[alt="21"] {
+          background: url("../img/icon/21.png") no-repeat 50% 50%;
+          -webkit-background-size: 80% auto;
+          -moz-background-size: 80% auto;
+          -o-background-size: 80% auto;
+          background-size: 80% auto;
+          -webkit-transition-property: background;
+          -webkit-transition-duration: 0.5s;
+          transition-property: background;
+          transition-duration: 0.5s; }
+          .tests ul > li[alt="21"]:hover {
+            background-color: white;
+            background-image: url("../img/icon/21-hover.png");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            -webkit-background-size: 80% auto;
+            -moz-background-size: 80% auto;
+            -o-background-size: 80% auto;
+            background-size: 80% auto; }
+        .tests ul > li[alt="22"] {
+          background: url("../img/icon/22.png") no-repeat 50% 50%;
+          -webkit-background-size: 80% auto;
+          -moz-background-size: 80% auto;
+          -o-background-size: 80% auto;
+          background-size: 80% auto;
+          -webkit-transition-property: background;
+          -webkit-transition-duration: 0.5s;
+          transition-property: background;
+          transition-duration: 0.5s; }
+          .tests ul > li[alt="22"]:hover {
+            background-color: white;
+            background-image: url("../img/icon/22-hover.png");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            -webkit-background-size: 80% auto;
+            -moz-background-size: 80% auto;
+            -o-background-size: 80% auto;
+            background-size: 80% auto; }
+        .tests ul > li a {
+          -webkit-flex-grow: 1;
+          flex-grow: 1;
+          border: 2px solid white;
+          border-radius: 6px; }
+
+  .logo {
+    -webkit-flex-basis: 582px;
+    flex-basis: 582px;
+    -webkit-order: 2;
+    order: 2; }
+    .logo img {
+      display: block;
+      width: 200px;
+      margin-left: auto;
+      margin-right: auto; } }
+    @media (min-width: 1200px) and (min-width: 1800px) {
+      .logo img {
+        width: 250px; } }
+    @media (min-width: 1200px) and (max-width: 1280px) {
+      .logo img {
+        width: 250px; } }
+
+@media (min-width: 1200px) {
+  .levels {
+    -webkit-flex-basis: 294px;
+    flex-basis: 294px;
+    -webkit-order: 1;
+    order: 1;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: column;
+    flex-flow: column; }
+    .levels h2 {
+      padding-left: 30px;
+      font-size: 22px;
+      text-transform: uppercase; }
+    .levels ul {
+      display: -webkit-flex;
+      display: flex;
+      height: 317px;
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin-bottom: auto; }
+      .levels ul > li {
+        box-sizing: border-box;
+        -webkit-flex-basis: 68px;
+        flex-basis: 68px;
+        margin-left: 30px;
+        margin-top: 15px;
+        text-align: center;
+        font-size: 24px;
+        display: -webkit-flex;
+        display: flex; }
+        .levels ul > li a {
+          -webkit-flex-grow: 1;
+          flex-grow: 1;
+          border: 2px solid white;
+          border-radius: 6px;
+          -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s; }
+          .levels ul > li a span {
+            -webkit-flex-grow: 1;
+            flex-grow: 1;
+            -webkit-align-self: center;
+            align-self: center; }
+          .levels ul > li a:hover {
+            color: #ad2f40;
+            background-color: white; }
+    .levels section {
+      height: 198px;
+      margin-left: 30px; } }
+
+/*# sourceMappingURL=custom.css.map */

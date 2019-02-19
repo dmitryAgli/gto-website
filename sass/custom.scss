@@ -1,0 +1,756 @@
+@import 'base/reset';
+@import 'variables/var';
+@import 'font/font';
+
+html, body, {
+	height: 100%;
+	font-family: $pancetta;
+	color: white;
+	background-color: $light-red;
+}
+
+.panel {
+	background-color: inherit;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+a, a:focus, a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+#accordion {
+	height: 100%;
+	/*to expand on full screen*/
+	@include display-flex;
+	@include flex-direction(column);
+}
+
+header.flex-container {
+	display: none;
+}
+
+h1 {
+	display: none;
+}
+
+footer > p {
+		display: none;
+	}
+
+/* START *** mobile first *** portret *** screen 360x640 (9:16) */
+
+.level-1:first-of-type {
+	/*to expand on full screen*/
+	flex-basis: 100%;
+
+	background: url(../img/logotip-gto.png) no-repeat 50% 50%;
+	@include background-size(67% auto);
+
+		@media #{$landscape} {
+			background: url(../img/pronormygto.png) no-repeat 93% 50%;
+			@include background-size(65% auto);
+		}
+
+		@media #{$ipad} {
+			background: url(../img/logotip-gto.png) no-repeat 50% 50%;
+			@include background-size(60% auto);
+		}
+
+		@media #{$ipad-land} {
+			background: url(../img/pronormygto.png) no-repeat 93% 50%;
+			@include background-size(65% auto);
+		}
+
+	a {
+		display: none;
+
+			@media #{$laptop} {
+				@include display-flex;
+			}
+	}
+}
+
+.level-1:nth-of-type(1n+2) {
+	
+	nav {
+		@include display-flex;
+		border-top: $border-prop;
+
+		&.level-4 {
+			border-bottom: 2px solid $ultra-dark-red; 
+		}
+	}
+		figure {
+			@include flex-basis(20%);
+			background: url(../img/mobile/mob-stupeni-white.png) no-repeat 50% 50%;
+			@include background-size(40% auto);
+			
+			@media #{$ipad} {
+				@include background-size(35% auto);
+			}
+
+			@media #{$ipad-land} {
+				@include background-size(25% auto);
+			}
+		}
+		figure.test {
+			@include flex-basis(20%);
+			background: url(../img/mobile/mob-tests-white.png) no-repeat 50% 50%;
+			@include background-size(40% auto);
+			
+			@media #{$ipad} {
+				@include background-size(35% auto);
+			}
+
+			@media #{$ipad-land} {
+				@include background-size(25% auto);
+			}
+			
+		}
+
+		h2 {
+			@include flex-basis(55%);
+
+				@media #{$ipad} {
+					@include flex-basis(60%);
+					}
+
+			font-size: $main-mobile-size;
+				
+				@media #{$iphone6S} {
+					font-size: $main-mobile-size * 1.15;
+				}
+
+				@media #{$ipad} {
+					font-size: $main-mobile-size * 1.6;
+				}
+
+			align-self: center;
+
+			@media #{$landscape} {
+				@include flex-basis(60%);
+				font-size: 40px;
+					
+					@media #{$ipad-land} {
+						font-size: 38px;
+					}
+			}
+
+		}
+
+		a {
+			@include flex-basis(25%);
+				
+				@media #{$landscape} {
+					@include flex-basis(20%);
+				}
+
+				@media #{$ipad} {
+					@include flex-basis(20%);
+					}
+
+			@include display-flex;
+			
+			&:active {
+				background-color: $dark-red;
+			}
+
+			/*Glyphicons*/
+			&:after {
+    			font-family: "Glyphicons Halflings";
+    			content: "\2212";
+    			font-size: 18px;
+
+    			@media #{$ipad} {
+					font-size: 18px * 1.6;
+				}
+    			
+    			@include flex-grow(1);
+    			text-align: center;
+    			align-self: center;
+  			}
+  			@media #{$landscape} {
+  				&:after	{
+  				font-size: 30px;
+  				}
+  			}
+  			&.collapsed:after {
+    			content: "\002b";
+  			}
+
+  			padding: {
+				top: 30px;
+				bottom: 30px;
+			}
+
+			@media #{$landscape} {
+				padding: {
+				top: 45px;
+				bottom: 45px;
+				}
+
+				@media #{$iphone5-land} {
+					padding-top: 38px;
+					padding-bottom: 38px;
+				}
+
+				@media #{$iphone6S-land} {
+					padding-top: 50px;
+					padding-bottom: 50px;
+				}
+				
+				@media #{$ipad-land} {
+					padding-top: 5px;
+					padding-bottom: 5px;
+				}
+
+			}
+
+			@media #{$iphone6S} {
+					padding-top: 34.5px;
+					padding-bottom: 34.5px;
+				}
+
+			@media #{$ipad} {
+					padding-top: 50px;
+					padding-bottom: 50px;
+				}
+		}
+}
+
+.level-2 {
+		@include display-flex;
+		border-top: $border-prop;
+		background-color: $mid-red;
+
+		p {
+			@include flex-basis(20%);
+			text-align: center;
+			align-self: center;
+			font-size: 32px;
+
+				@media #{$iphone6S} {
+					font-size: 32px * 1.15;
+				}
+
+				@media #{$ipad} {
+					font-size: 32px * 1.6;
+				}
+
+			color: $goldy;
+
+			@media #{$landscape} {
+				font-size: 56px;
+			}
+		}
+
+		h3 {
+			@include flex-basis(55%);
+
+				@media #{$ipad} {
+					@include flex-basis(60%);
+					}
+
+			font-size: $main-mobile-size;
+				
+				@media #{$iphone6S} {
+						font-size: $main-mobile-size * 1.15;
+					}
+
+				@media #{$ipad} {
+						font-size: $main-mobile-size * 1.6;
+					}
+
+			align-self: center;
+
+			@media #{$landscape} {
+				@include flex-basis(60%);
+				font-size: $main-mobile-size-landscape;
+			}
+		}
+
+		a {
+			@include flex-basis(25%);
+				@media #{$landscape} {
+				@include flex-basis(20%)
+				}
+		}
+}
+
+.level-3 {
+	@include display-flex;
+		border-top: $border-prop;
+		background-color: $mid-red;
+
+	figure {
+		@include flex-basis(20%);
+	}
+
+    @for $i from 1 through 22 {
+    	figure[alt="#{$i}"] {
+            background: url("../img/icon/#{$i}.png") no-repeat 50% 50%;
+            @include background-size-level-3;
+
+            @media #{$ipad} {
+				@include background-size(50% auto);
+			}
+
+			@media #{$ipad-land} {
+				@include background-size(40% auto);
+			}
+    	}
+    }
+	
+	h3 {
+		@include flex-basis(55%);
+
+			@media #{$ipad} {
+					@include flex-basis(60%);
+					}
+
+		font-size: 1.10em;
+
+			@media #{$iphone6S} {
+				font-size: 1.16em * 1.15;
+			}
+			
+			@media #{$landscape} {
+				@include flex-basis(60%);
+				font-size: 2em;
+
+				@media #{$iphone5-land} {
+				font-size: 2em * 0.888;
+				}
+
+				@media #{$iphone6S-land} {
+					font-size: 2em * 1.15;
+				}
+			}
+
+			@media #{$iphone5} {
+				font-size: 1.16em * 0.89;
+			}
+
+			@media #{$ipad} {
+				font-size: 1.16em * 1.6;
+			}
+
+			@media #{$ipad-land} {
+				font-size: 2.15em;
+			}
+
+
+		line-height: 130%;
+		align-self: center;
+	}
+	
+	> a:first-of-type {
+		@include flex-basis(25%);
+
+			@media #{$landscape} {
+				@include flex-basis(20%);
+			}
+
+			@media #{$ipad} {
+					@include flex-basis(20%);
+					}
+
+		padding: {
+				top: 32px;
+				bottom: 32px;
+			}
+
+			@media #{$landscape} {
+				padding: {
+					top: 45px;
+					bottom: 45px;
+				}
+			}
+
+			@media #{$ipad} {
+				padding: {
+					top: 50px;
+					bottom: 50px;
+				}
+			}
+	}
+}
+
+p.level-3 {
+	background-color: white;
+	color: black;
+	font-family: serif;
+	font-size: $main-mobile-size;
+		
+		@media #{$iphone5} {
+				font-size: $main-mobile-size * 0.9;
+			}
+
+	line-height: 120%;
+	text-indent: 25px;
+	border-top: none;
+	padding: $main-mobile-padding;
+
+		@media #{$iphone6S} {
+				font-size: $main-mobile-size * 1.15;
+			}
+
+		@media #{$landscape} {
+				font-size: $main-mobile-size-landscape;
+
+				@media #{$iphone5-land} {
+					font-size: $main-mobile-size-landscape * 0.888;
+				}
+
+				@media #{$iphone6S-land} {
+					font-size: $main-mobile-size-landscape * 1.15;
+				}
+
+				@media #{$ipad} {
+					font-size: $main-mobile-size * 1.6;
+					line-height: 130%;
+				}
+
+				@media #{$ipad-land} {
+					font-size: 38px;
+				}
+			}
+
+	& ~ p.level-3 {
+		padding-top: 0;
+		margin-top: -10px;
+	}
+}
+
+ol.order-list {
+	background-color: white;
+	color: black;
+	font-family: serif;
+	font-size: $main-mobile-size;
+
+		@media #{$landscape} {
+				font-size: $main-mobile-size-landscape;
+
+				@media #{$iphone5-land} {
+					font-size: $main-mobile-size-landscape * 0.888;
+				}
+
+				@media #{$iphone6S-land} {
+					font-size: $main-mobile-size-landscape * 1.15;
+				}
+			}
+
+		@media #{$iphone5} {
+				font-size: $main-mobile-size * 0.9;
+			}
+
+		@media #{$iphone6S} {
+				font-size: $main-mobile-size * 1.15;
+			}
+
+		@media #{$ipad} {
+				font-size: $main-mobile-size * 1.6;
+			}
+
+		@media #{$ipad-land} {
+					font-size: 38px;
+				}
+
+	line-height: 120%;
+	text-indent: 25px;
+	border-top: none;
+	padding: $main-mobile-padding;
+	margin-top: -25px;
+
+	
+}
+
+.level-4 {
+	@include display-flex;
+		background-color: $dark-red;
+
+	figure {
+		@include flex-basis(20%);
+	}
+
+	@each $element in boys, girls, man, woman, empty {
+		> figure.#{$element} {
+			background: url(../img/empty_wh.png) no-repeat 50% 50%;
+			@include background-size(45% auto);
+		}
+	}
+	h4 {
+		@include flex-basis(55%);
+
+			@media #{$landscape} {
+				@include flex-basis(60%)
+				}
+
+			@media #{$ipad} {
+				@include flex-basis(60%)
+				}
+
+		font-size: $main-mobile-size;
+			
+			@media #{$iphone6S} {
+				font-size: $main-mobile-size * 1.15;
+			}
+
+			@media #{$ipad} {
+					font-size: $main-mobile-size * 1.6;
+				}
+
+		align-self: center;
+
+		@media #{$landscape} {
+			font-size: $main-mobile-size-landscape;
+		}
+	}
+	
+	> a:first-of-type {
+		@include flex-basis(25%);
+			
+			@media #{$landscape} {
+				@include flex-basis(20%)
+				}
+
+			@media #{$ipad} {
+					@include flex-basis(20%);
+					}
+
+		&:active {
+				background-color: $ultra-dark-red;
+		}
+	}
+}
+
+/* TABLE main styles - start*/
+table, tbody, tr, td {
+	display: block;
+}
+
+tr.flex-row {
+	background-color: white;
+	color: black;
+	@include display-flex;
+	
+	td {
+
+		margin: 0 2px 0 2px;
+		@include flex-grow(1);
+
+		&:first-of-type {
+			@include flex-basis(8%);
+			@include display-flex;
+
+			&.total-0 {
+				@include flex-basis(0%);
+			}
+		}
+
+		&:only-child {
+			padding: {
+				top: 5px;
+				bottom: 5px;
+			}
+		}
+
+		&:nth-of-type(2) {
+			@include flex-basis(45.5%);
+			@include display-flex;
+			padding: {
+				top: 8px;
+				bottom: 8px;
+			}
+			&.total {
+				@include flex-basis(53.5%);
+			}
+		}
+
+		&:nth-of-type(1n+3) {
+			@include flex-basis(15.5%);
+			@include display-flex;
+		}
+
+		&:nth-of-type(3) {
+			background-color: #ffd39b;
+		}
+
+		&:nth-of-type(3).colspan-3 {
+			@include flex-basis(49%);
+			background-color: white;
+
+			&.single-gold {
+				background-color: #FFEBCD;
+			}
+		}
+
+		&:nth-of-type(3).colspan-2 {
+			@include flex-basis(32%);
+			background-color: white;
+
+			& ~ td {
+				background-color: #FFEBCD;
+				padding: 0;
+
+				span	{
+					line-height: 1;
+					font-size: 11px;
+
+						@media #{$landscape} {
+								font-size: 20px;
+								
+								@media #{$iphone5-land} {
+									font-size: 18px;
+								}
+							}
+						@media #{$iphone5} {
+								font-size: 11px * 0.888;
+							}
+
+						@media #{$ipad} {
+								font-size: 23px;
+							}
+
+					&.font-inh {
+					font-size: $main-mobile-size;
+						@media #{$landscape} {
+							font-size: 38px;
+							@media #{$iphone5-land} {
+								font-size: 38px * 0.888;
+							}
+							@media #{$iphone6S-land} {
+								font-size: 38px * 1.15;
+							}
+
+						}
+						@media #{$iphone5} {
+							font-size: $main-mobile-size * 0.888;
+						}
+						@media #{$ipad} {
+							font-size: $main-mobile-size * 1.6;
+						}
+					}
+				}
+			}
+		}
+
+		&:nth-of-type(4) {
+			background-color: #eee9e9;
+		}
+
+		&:nth-of-type(5) {
+			background-color: #FFEBCD;
+		}
+
+		span {
+			@include flex-grow(1);
+			font-size: $main-mobile-size;
+				
+				@media #{$iphone6S} {
+						font-size: $main-mobile-size * 1.15;
+				}
+				@media #{$landscape} {
+					font-size: 38px;
+					@media #{$iphone5-land} {
+						font-size: 38px * 0.888;
+					}
+					@media #{$iphone6S-land} {
+						font-size: 38px * 1.15;
+					}
+
+				}
+				
+				@media #{$iphone5} {
+					font-size: $main-mobile-size * 0.888;
+					}
+
+				@media #{$ipad} {
+						font-size: $main-mobile-size * 1.6;
+					}
+
+			text-align: center;
+			align-self: center;
+
+			&.font-sm {
+				font-size: 11px;
+				@media #{$landscape} {
+					font-size: 20px;
+					@media #{$iphone5-land} {
+						font-size: 20px * 0.888;
+					}
+					@media #{$iphone6S-land} {
+						font-size: 20px * 1.15;
+					}
+				}
+				@media #{$iphone5} {
+					font-size: 11px * 0.888;
+				}
+				@media #{$ipad} {
+					font-size: 23px;
+				}
+			}
+		}
+		span.text-left {
+			text-align: left;
+		}
+
+	}
+}
+
+/* TABLE main styles - end*/
+
+/*table header styles - start*/
+tr.flex-row > td.header {
+	padding: {
+		top: 8px;
+		bottom: 8px;
+	}
+	
+	@media #{$ipad} {
+		padding: {
+		top: 20px;
+		bottom: 20px;
+			}
+		}
+
+	@media #{$ipad-land} {
+		padding: {
+		top: 30px;
+		bottom: 30px;
+			}
+		}
+}
+
+tr.flex-row {
+	@each $element in $medals {
+		td.#{$element} {
+			background-color: white;
+		}
+	}
+}
+
+@each $element in $medals {
+	.#{$element} {
+		background: url(../img/#{$element}-tr.png) no-repeat 50% 50%;
+		@include background-size(auto 75%);
+	}
+}
+/*table header styles - end*/
+
+/*table inner border styles - start*/
+tr.flex-row.border {
+	border-bottom: 1px solid $light-red;
+}
+
+.bordershot {
+	td:nth-of-type(1n+2) {
+		border-bottom: 1px solid $light-red;
+	}
+}
+/*table inner border styles - end*/
+
+@import 'laptop';

@@ -1,0 +1,73 @@
+
+
+$light-red: #c53649;
+$mid-red: #ad2f40;
+$dark-red: #942938;
+$ultra-dark-red: #660000;
+$gold: rgb(255,204,153);
+$goldy: #f6d282;
+$main-mobile-size: 21px;
+$main-mobile-size-landscape: 38px;
+$main-mobile-padding: 15px;
+$medals: bronze, silver, gold;
+$laptop-h2: 22px;
+$laptop-pill-font: 24px;
+
+
+/*media quaries*/
+$landscape: "(orientation: landscape)"; //640 x 360
+$iphone5: "(max-width: 320px)"; //320 x 568
+$iphone5-land: "(max-width: 570px)"; //568 x 568
+$iphone6S: "(width: 414px)"; //414 x 736
+$iphone6S-land: "(min-width: 736px)"; //736 x 414
+$ipad: "(min-width: 768px)"; //768 x 1024
+$ipad-land: "(min-width: 1024px)"; //1024 x 768
+$laptop: "(min-width: 1200px)"; //1366 x 768
+$laptop-cube: "(max-width: 1280px)"; //1280 x 1024
+$laptop-HD-mid: "(min-width: 1550px)"; //1920 x 1080
+$laptop-HD: "(min-width: 1800px)"; //1920 x 1080
+
+
+
+//mixins
+@mixin display-flex {
+	display: -webkit-flex;
+	display: flex;
+}
+
+@mixin flex-direction($direction) {
+	-webkit-flex-flow: $direction;
+	flex-flow: $direction;
+}
+@mixin flex-grow($num) {
+	-webkit-flex-grow: $num;
+	flex-grow: $num;
+}
+@mixin flex-basis($num) {
+	-webkit-flex-basis: $num;
+	flex-basis: $num;
+}
+@mixin flex-wrap($wrap) {
+	-webkit-flex-wrap: $wrap;
+	flex-wrap: $wrap;
+}
+@mixin order($num) {
+	-webkit-order: $num;
+	order: $num;
+}
+@mixin background-size($prop...) {
+	-webkit-background-size: $prop;
+	-moz-background-size: $prop;
+	-o-background-size: $prop;
+	background-size: $prop;
+}
+
+@mixin background-size-level-3 {
+	-webkit-background-size: 60% auto;
+	-moz-background-size: 60% auto;
+	-o-background-size: 60% auto;
+	background-size: 60% auto;
+}
+
+$border-rad: 0;
+$border-prop: 3px solid #{$dark-red};

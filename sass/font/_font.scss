@@ -1,0 +1,23 @@
+@font-face {
+	font-family: 'PancettaPro';
+	src: url('../fonts/PancettaPro-Regular-webfont.eot');
+	src: url('../fonts/PancettaPro-Regular-webfont.eot?#iefix') format('embeddedopentype'),
+	url('../fonts/PancettaPro-Regular-webfont.woff2') format('woff2'),
+	url('../fonts/PancettaPro-Regular-webfont.woff') format('woff'),
+	url('../fonts/PancettaPro-Regular-webfont.ttf') format('truetype'),
+	url('../fonts/PancettaPro-Regular-webfont.svg') format('svg');
+}
+$pancetta: PancettaPro, Arial, Helvetica, sans-serif;
+
+@font-face {
+	font-family: 'HattoriHanzo';
+	src: 	url('../fonts/hattori_hanzo-webfont.woff2') format('woff2'),
+			url('../fonts/hattori_hanzo-webfont.woff') format('woff');
+}
+$hattori: HattoriHanzo, Arial, Helvetica, sans-serif;
+
+@font-face {
+	font-family: 'Monoton-Regular';
+	src: 	url('../fonts/Monoton-Regular.ttf') format('truetype');
+}
+$monoton: Monoton-Regular, Arial, Helvetica, sans-serif;

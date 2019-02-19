@@ -1,0 +1,175 @@
+/*LAPTOP styles*/
+@media #{$laptop} {
+
+	.level-1:first-of-type {
+		background-image: none;
+		@media #{$laptop-cube} {
+			background: url("../img/border.png") repeat-x 0 100%;
+			@include background-size(2% auto);
+		}
+		@media #{$laptop-HD} {
+			background: url("../img/border.png") repeat-x 0 100%;
+			@include background-size(1.5% auto);
+		}
+	}
+	
+	#accordion li > nav {
+		display: none;
+	}
+
+	header.flex-container {
+		box-sizing: border-box;
+		max-width: 1170px;
+		margin: 0px auto 0 auto;
+		@media #{$laptop-cube} {
+			margin-top: 30px;
+			margin-bottom: 40px;
+
+		}
+		@media #{$laptop-HD-mid} {
+			margin-top: 30px;
+			margin-bottom: 0px;
+		}
+		@media #{$laptop-HD} {
+			margin-top: 70px;
+			margin-bottom: 0px;
+		}
+		@include display-flex;
+		padding-top: 25px;
+	}
+
+	.tests {
+		@include flex-basis(294px);
+		@include order(3);
+
+		h2 {
+			font-size: $laptop-h2;
+			text-transform: uppercase;
+		}
+
+		ul {
+			@include display-flex;
+			@include flex-wrap(wrap);
+			
+
+			> li {
+				box-sizing: border-box;
+				height: 68px;
+				@include flex-basis(68px);
+				margin-right: 30px;
+				margin-top: 15px;
+				background-size: 80% auto;
+				border-radius: 6px;
+				@include display-flex;
+
+				@for $i from 1 through 22 {
+					&[alt="#{$i}"]{
+						background: url("../img/icon/#{$i}.png") no-repeat 50% 50%;
+						@include background-size(80% auto);
+						-webkit-transition-property: background;
+						-webkit-transition-duration: 0.5s;
+						transition-property: background;
+						transition-duration: 0.5s;
+
+						&:hover {
+						background-color: white;
+						background-image: url("../img/icon/#{$i}-hover.png");
+						background-repeat: no-repeat;
+						background-position: 50% 50%;
+						@include background-size(80% auto);
+						}
+					}
+				}
+
+				a {
+					@include flex-grow(1);
+					border: 2px solid white;
+					border-radius: 6px;
+				}
+
+			}
+		}
+	}
+
+	
+
+	.logo {
+			@include flex-basis(582px);
+			@include order(2);
+
+			img {
+				display: block;
+				width: 200px;
+				@media #{$laptop-HD} {
+					width: 250px;
+				}
+				@media #{$laptop-cube} {
+					width: 250px;
+				}
+				margin-left: auto;
+				margin-right: auto;
+			}
+	}
+
+	
+
+	.levels {
+			@include flex-basis(294px);
+			@include order(1);
+
+			@include display-flex;
+			@include flex-direction(column);
+		
+			h2 {
+				padding-left: 30px;
+				font-size: $laptop-h2;
+				text-transform: uppercase;
+			}
+
+			ul {
+				@include display-flex;
+				height: 317px;
+				@include flex-wrap(wrap);
+				margin-bottom: auto;
+
+				> li {
+					box-sizing: border-box;
+					@include flex-basis(68px);
+					margin-left: 30px;
+					margin-top: 15px;
+					text-align: center;
+					font-size: $laptop-pill-font;
+					@include display-flex;
+
+					a {
+						@include flex-grow(1);
+						border: 2px solid white;
+						border-radius: 6px;
+						-webkit-transition-duration: 0.5s;
+						transition-duration: 0.5s;
+
+						span {
+							@include flex-grow(1);
+							-webkit-align-self: center;
+							align-self: center;
+						}
+
+						&:hover {
+							color: $mid-red;
+							background-color: white;
+						}
+
+					}
+
+				}
+
+			}
+
+			section {
+				height: 198px;
+				margin-left: 30px;
+			}
+	}
+
+
+}
